@@ -17,7 +17,7 @@ First, install [AutoHotKey](https://www.autohotkey.com/). <br> Then, install the
 
 Now, you have to check your hardware ID using `Monitor.ahk` (source: AutoHotInterception Repo).
 
-![AHInterception Monitor](Images/monitor.jpg)
+![AHInterception Monitor](images/monitor.jpg)
 
 Pull this repo.
 
@@ -29,3 +29,5 @@ With your VID and PID.
 
 Finally, set `mac_remapper.ahk` to run on startup and you're good to go!
 
+# Special Thanks
+- [sameerdash2](https://github.com/sameerdash2) for debugging this README

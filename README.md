@@ -1,4 +1,4 @@
-#Mac Remapper
+# Mac Remapper
 
 This remaps the Mac 2008 keyboard's Left Option and Left Command keys, to match Win and Alt on Windows.
 
@@ -17,7 +17,7 @@ First, install [AutoHotKey](https://www.autohotkey.com/). <br> Then, install the
 
 Now, you have to check your hardware ID using `Monitor.ahk` (source: AutoHotInterception Repo).
 
-![AHInterception Monitor](Images/monitor.png)
+![AHInterception Monitor](Images/monitor.jpg)
 
 Pull this repo.
 

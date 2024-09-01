@@ -8,6 +8,9 @@ This remaps the Mac 2008 keyboard's Left Option and Left Command keys, to match 
 
 Command serves as super/Windows on Windows and option serves as alt, which is flipped. To fix this, you can use `mac_remapper.ahk`.
 
+# WARNING
+Do not unplug and replug more than 10 times, the driver cannot detect the device after that
+
 
 # Requirements & Installation
 First, install [AutoHotKey](https://www.autohotkey.com/). <br> Then, install the [AutoHotInterception Driver](https://github.com/evilC/AutoHotInterception).

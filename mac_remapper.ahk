@@ -28,6 +28,7 @@ LAlt::LWin
 CheckDevice(){
     global AHI, cm1, id1, dev ; global vars
     ;; cm1 is 0 during first connection
+    ;; if it isn't active then try reconnecting. forever.
     if(cm1 == 0 || !cm1.IsActive){
         ;; get device id code
         

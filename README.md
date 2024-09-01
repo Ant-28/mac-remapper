@@ -18,7 +18,6 @@ First, install [AutoHotKey](https://www.autohotkey.com/). <br> Then, install the
 Now, you have to check your hardware ID using `Monitor.ahk` (source: AutoHotInterception Repo).
 
 ![AHInterception Monitor](Images/monitor.jpg)
-
 Pull this repo.
 
 Click on each of the IDs (ONE AT A TIME! Select more than one and it can crash your device) and type on your keyboard until you get signals from the desired keyboard (for me, this was ID7). Note down the VID and PID.

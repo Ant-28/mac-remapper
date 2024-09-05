@@ -14,7 +14,7 @@ id1 := 0
 
 ;; this needs to be run in a loop upon disconnect
 
-SetTimer CheckDevice, 500 ;; making this snappy
+SetTimer CheckDevice, 1000 ;; making this snappy but not too snappy or it bugs out?
 return
 
 #HotIf cm1 != 0  && cm1.IsActive

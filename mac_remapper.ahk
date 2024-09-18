@@ -3,7 +3,7 @@
 Persistent ; (Interception hotkeys do not stop AHK from exiting, so use this)
 #include Lib\AutoHotInterception.ahk
 
-
+InstallKeybdHook
 ; Mac Remapper
 ; The mac 2008 keyboard has command and alt swapped so AHKInterceptor can fix that
 ; god bless chatgpt for actually explaining this
@@ -13,13 +13,28 @@ cm1 := 0
 id1 := 0
 
 ;; this needs to be run in a loop upon disconnect
-
+A_MenuMaskKey := "vkE8"
 SetTimer CheckDevice, 1000 ;; making this snappy but not too snappy or it bugs out?
 return
 
 #HotIf cm1 != 0  && cm1.IsActive
-LWin::LAlt
-LAlt::LWin
+
+*Lwin::
+{
+send "{blind}{lalt downR}"
+}
+*Lwin up::
+{
+send "{blind}{lalt up}"
+}
+*LAlt::
+{
+send "{blind}{lwin downR}"
+}
+*Lalt up::
+{
+send "{blind}{lwin up}"
+}
 #HotIf
 
 ;; chatgpt only gave me the idea of neatly changing things into functions

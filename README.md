@@ -1,6 +1,6 @@
 # Mac Remapper
 
-This remaps the Mac 2008 keyboard's Left Option and Left Command keys, to match Win and Alt on Windows.
+This remaps the Mac 2008 keyboard's Left Option and Left Command keys, to match LWin and LAlt on Windows.
 
 ![Mac Keyboard](images/mac_keyboard.jpg)
 
@@ -12,7 +12,7 @@ Command serves as super/Windows on Windows and option serves as alt, which is fl
 Do not unplug and replug more than 10 times, the driver cannot detect the device after that
 
 # Known Issues
-Ctrl-Alt-Del doesn't work, this is because this is intercepted at the hardware level.
+Ctrl-Alt-Del doesn't work, this is because this is intercepted at the hardware level. For now, use RAlt, I guess.
 
 # Requirements & Installation
 First, install [AutoHotKey](https://www.autohotkey.com/). <br> Then, install the [AutoHotInterception Driver](https://github.com/evilC/AutoHotInterception).

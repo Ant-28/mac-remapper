@@ -19,22 +19,6 @@ return
 
 #HotIf cm1 != 0  && cm1.IsActive
 
-*Lwin::
-{
-send "{blind}{lalt downR}"
-}
-*Lwin up::
-{
-send "{blind}{lalt up}"
-}
-*LAlt::
-{
-send "{blind}{lwin downR}"
-}
-*Lalt up::
-{
-send "{blind}{lwin up}"
-}
 #HotIf
 
 ;; chatgpt only gave me the idea of neatly changing things into functions
@@ -50,13 +34,25 @@ CheckDevice(){
 		dev := AHI.Instance.GetDeviceId(false, 0x05AC, 0x0204, 1) ;; get new keyboard id
 		;; the device has to exist
         if(dev != 0){
-            ;; remove old one
-            if(AHI._contextManagers.Has(id1)){
-                AHI.RemoveContextManager(id1)
-            }
-            id1 := dev
-            cm1 := AHI.CreateContextManager(id1)
+        ;     ;; remove old one
+        ;     if(AHI._contextManagers.Has(id1)){
+        ;         AHI.RemoveContextManager(id1)
+        ;     }
+        ;     id1 := dev
+        ;     cm1 := AHI.CreateContextManager(id1)
+        AHI.SubscribeKey(dev, GetKeySC("LAlt"), true, AltEvent)
+        AHI.SubscribeKey(dev, GetKeySC("LWin"), true, WinEvent)
         }
+
+        
     }
     return
+}
+AltEvent(state){
+   
+    AHI.SendKeyEvent(dev, GetKeySC("LWin"), state)
+}
+WinEvent(state){
+   
+    AHI.SendKeyEvent(dev, GetKeySC("LAlt"), state)
 }

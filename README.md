@@ -12,7 +12,7 @@ Command serves as super/Windows on Windows and option serves as alt, which is fl
 Do not unplug and replug more than 10 times, the driver cannot detect the device after that
 
 # Known Issues
-Ctrl-Alt-Del doesn't work, this is because this is intercepted at the hardware level. For now, use RAlt, I guess.
+The Ctrl-Alt-Del issue has been fixed. Using subscription events instead of a context manager allows the interception to be completed at the kernel level. The only issue is the unplug+replug problem, which is an issue with AHI. Lag should also be removed with this intercept.
 
 # Requirements & Installation
 First, install [AutoHotKey](https://www.autohotkey.com/). <br> Then, install the [AutoHotInterception Driver](https://github.com/evilC/AutoHotInterception).

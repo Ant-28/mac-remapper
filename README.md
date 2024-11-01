@@ -37,3 +37,7 @@ Finally, set `mac_remapper.ahk` to run on startup and you're good to go!
 
 # Special Thanks
 - [sameerdash2](https://github.com/sameerdash2) for debugging this README
+- [Umair Rizwan](https://github.com/iconsumeplutonium) for debugs + Code cleanup with some PID/VID vagueness
+    
+    Developer note (for when I read this 5 years from now): this happened due to having to use `GetDeviceID` instead of `GetKeyboardId` 
+    (basically tearing apart the AHI function calls and reworking it for an event loop)

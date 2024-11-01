@@ -13,11 +13,11 @@ AHI := AutoHotInterception()
 cm1 := 0
 
 ;; Replace these with your device's VID and PID
-VID := 0
-PID := 0
+VID := 0x05AC
+PID := 0x0204
 
 ;; this needs to be run in a loop upon disconnect
-A_MenuMaskKey := "vkE8"
+A_MenuMaskKey := "vkE8" ;; I forgot what this does I think I'm huffing lead
 SetTimer CheckDevice, 1000 ;; making this snappy but not too snappy or it bugs out?
 return
 

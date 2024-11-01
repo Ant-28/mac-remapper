@@ -25,8 +25,12 @@ Pull this repo.
 
 Click on each of the IDs (ONE AT A TIME! Select more than one and it can crash your device) and type on your keyboard until you get signals from the desired keyboard (for me, this was ID7). Note down the VID and PID.
 
-Once you have this, modify `mac_remapper.ahk` and modify this line: <br>
-`id1 := AHI.GetKeyboardId(<VID>, <PID>, 1)` <br>
+Once you have this, modify `mac_remapper.ahk` and modify these lines:
+```
+;; Replace these with your device's VID and PID
+VID := 0
+PID := 0
+```
 With your VID and PID.
 
 Finally, set `mac_remapper.ahk` to run on startup and you're good to go!
